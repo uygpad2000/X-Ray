@@ -1,6 +1,6 @@
-CreateElement('html','head')
-let title = CreateElement('head','title')
+Create('html','head')
+var title = Create('head','title')
 title.textContent = "My Blog"
-CreateElement('html','body')
-node0 = CreateElement('body','h1')
+Create('html','body')
+node0 = Create('body','h1')
 node0.textContent = "Welcome!"
