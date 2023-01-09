@@ -72,8 +72,8 @@ function INIT(){
 		if (Width < 500) {
 			let Device_Type = 'Mobile';
 			let New_Script = Create('head','Script');
-			Set_Element_Attiributes(New_Script,'type',"text/javascript");
-			Set_Element_Attiributes(New_Script,'src',"Script\\X-Mobile.js");
+			Set_Element_Attributes(New_Script,'type',"text/javascript");
+			Set_Element_Attributes(New_Script,'src',"Script\\X-Mobile.js");
 			let Desktop_Link = document.querySelector("script[src]");
 			return Device_Type;
 		}
