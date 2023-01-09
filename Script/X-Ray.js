@@ -34,14 +34,14 @@ function Create(Parent,Tag){
 	return Element;
 }
 
-function Set_Element_Attiributes(Element,AttributeName,AttributeValue){
+function Set_Element_Attributes(Element,AttributeName,AttributeValue){
 	Element.setAttribute(AttributeName,AttributeValue);
 }
 
 function Language_Adjust(){
 	let User_Language = navigator.language;
 	let html = document.getElementsByTagName('html')[0];
-	Set_Element_Attiributes(html,'lang',User_Language);
+	Set_Element_Attributes(html,'lang',User_Language);
 }
 
 function Device(){
@@ -53,9 +53,9 @@ function Device(){
 
 function Load_Style(Style_Sheet_Path){
 	let Style = Create('head','link');
-	Set_Element_Attiributes(Style,'rel','stylesheet');
-	Set_Element_Attiributes(Style,'type','text/css');
-	Set_Element_Attiributes(Style,'href',Style_Sheet_Path);
+	Set_Element_Attributes(Style,'rel','stylesheet');
+	Set_Element_Attributes(Style,'type','text/css');
+	Set_Element_Attributes(Style,'href',Style_Sheet_Path);
 	return;
 }
 
