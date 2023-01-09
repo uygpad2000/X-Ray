@@ -1,7 +1,8 @@
 Create('html','head')
-var title = Create('head','title')
+let title = Create('head','title')
 title.textContent = "My Blog"
-Create('head','meta')
+let meta = Create('head','meta')
+Set_Element_Attiributes('meta','charset','utf-8')
 Create('html','body')
 var node0 = Create('body','h1')
 node0.textContent = "Welcome!"
