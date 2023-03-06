@@ -1,17 +1,35 @@
 h1{
     background-color: #4e4e4e;
     border: solid 5px #7e7e7e;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    box-shadow: 0px 5px 5px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    box-shadow: inset 0px 0px 10px;
     color:#69E1A5;
+    font-size: 25px;
+    height: 30px;
+    left: 0px;
+    margin-bottom: 5px;
+    margin-top: 0px;
+    position: absolute;
     text-align: center;
-    text-shadow: -1px -1px 1px #ffffff,7px 1px 1px #000000;
+    text-shadow: -1px -1px 1px #ffffff,2px 1px 1px #000000;
+    top:0px;
     user-select: none;
+    width: 300px;
 }
 h1:hover{
-    background-color: #c2c2c2;
-    color: #175535;
-    cursor: pointer;
+    background-color: #00ffaa;
+    color: #4e4e4e;
     text-shadow: -1px -1px 1px #ffffff;
+}
+
+#about{
+    bottom: 0px;
+    font-size: 15px;
+    position: absolute;
+    right: 20px;
+}
+#about:hover{
+    color: #0c0cdd;
+    cursor: pointer;
 }

@@ -5,6 +5,15 @@
 */
 
 'use-strict'
+
+function bindEvent(Tag,Function,Index=0){
+
+    var t = document.getElementsByTagName(Tag)[Index];
+    t.onclick = Function;
+    return;
+}
+
+
 function Create(ObjList){
 
     for (var i = 0; i < ObjList.length; i++) {
@@ -15,14 +24,11 @@ function Create(ObjList){
         if (typeof(ObjList[i]['Parent']) == 'undefined'){
             var t = document.createElement(ObjList[i]['Tag']);
             document.body.appendChild(t);
-            delete ObjList[i]['Tag']
         }
         else{
             var p = document.getElementsByTagName(ObjList[i]['Parent'])[0];
             var t = document.createElement(ObjList[i]['Tag']);
             p.appendChild(t);
-            delete ObjList[i]['Parent']
-            delete ObjList[i]['Tag']
         }
 
         // use a switch case to attach all
@@ -40,7 +46,6 @@ function Create(ObjList){
                     t.setAttribute(key,ObjList[i][key]);
                     break;
             }
-            delete ObjList[i][key]
         }
     }
     return;
