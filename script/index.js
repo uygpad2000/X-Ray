@@ -6,7 +6,23 @@ var UISet = [
 {'Tag':'link','rel':'stylesheet','href':'.\\style\\index.css','Parent':'head'},
 // DOM Element
 {'Tag':'h1','Text':'Uygpad\'s Home'},
-{'Tag':'div','Text':'Site Directory'},
-{'Tag':'div','Text':'Sorry,but this site is under construction','id':'warn'}
+{'Tag':'div','Text':'Site Directory','id':'guide'},
+{'Tag':'div','Text':'Sorry,but this site is under construction','id':'warn'},
+{'Tag':'div','id':'top-bar'},
+{'Tag':'div','Text':'Blog','id':'blog'}
             ]
 Generate(UISet)
+var dir = document.getElementById('guide')
+var timer = true
+dir.onclick=()=>{
+    if (timer){
+        Generate([{'Tag':'div','Text':'Top Rated','id':'top'}])
+        document.getElementById('top').onclick=()=>{
+            location.href = './page/top.html'
+        }
+    }
+    else{
+        document.getElementById('top').remove()
+    }
+    timer = !timer
+}

@@ -2,14 +2,13 @@ body{
     margin: 0px;
 }
 h1{
-    background-color: #dfdfdf;
-    border: #000000 solid 4px;
+    background-color: #c7c7c7;
+    border: #252525 solid 4px;
     border-top-right-radius: 30px;
     box-shadow: 0px 0px 8px 4px #000000 inset;
     color:#424242;
     height: 60px;
     margin: 0px;
-    opacity: 0.5;
     text-align: center;
     text-shadow: -2px 0 2px #8a8a8a;
     user-select: none;
@@ -20,10 +19,64 @@ h1:hover{
     color: #858585;
     text-shadow: 2px 0 2px #1d1d1d;
 }
+div#guide{
+    background-color: #a8a8a8;
+    border: #252525 solid 4px;
+    color: #292929;
+    font-size: 35px;
+    height: 40px;
+    text-align: center;
+    user-select: none;
+    width: 390px;
+}
+
+div#guide:hover{
+    background-color: #a8a8a8;
+    border: #8a8a8a solid 4px;
+    box-shadow: 0 0 5px 2px #4d4d4d inset;
+    color: #dbffd7;
+    text-shadow: 2px 0 5px;
+    cursor: pointer;
+}
+
 div#warn{
     background-image: linear-gradient(-45deg,#ff9900 25%,#ffffff 0%, #ffffff 50%,#ff9900 0%,#ff9900 75%,#ffffff 0%);
     background-size: 100px 100px;
     border: #000000 solid 4px;
+    bottom: 0px;
     color:#000000;
-    width:380px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+}
+
+div#top{
+    color: #000000;
+    cursor: pointer;
+    margin: 0;
+    text-align: center;
+    width:390px;
+}
+
+div#top:hover{
+    color: #8a8a8a;
+}
+#top-bar{
+    background-color: #686868;
+    height: 116px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: -100;
+}
+
+#blog{
+    color: #ffffff;
+    position: absolute;
+    top: 45px;
+    margin-left: 500px;
+}
+#blog:hover{
+    color: #afafaf;
+    cursor: pointer;
 }
