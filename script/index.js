@@ -9,7 +9,10 @@ var UISet = [
 {'Tag':'div','Text':'Site Directory','id':'guide'},
 {'Tag':'div','Text':'Sorry,but this site is under construction','id':'warn'},
 {'Tag':'div','id':'top-bar'},
-{'Tag':'div','Text':'Blog','id':'blog'}
+{'Tag':'div','Text':'Blog','id':'blog'},
+{'Tag':'div','Text':'Language','id':'lang'},
+{'Tag':'img','src':'https://img.moegirl.org.cn/common/d/d7/%E4%B8%9C%E9%9B%AA%E8%8E%B2.png',
+'id':'kawaii'}
             ]
 Generate(UISet)
 var dir = document.getElementById('guide')

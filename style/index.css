@@ -80,3 +80,21 @@ div#top:hover{
     color: #afafaf;
     cursor: pointer;
 }
+#lang{
+    color: #ffffff;
+    position: absolute;
+    top: 45px;
+    margin-left: 650px;
+}
+#lang:hover{
+    color: #afafaf;
+    cursor: pointer;
+}
+
+#kawaii{
+    height: 112px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0;
+}
