@@ -1,1 +1,0 @@
-function Generate(t){for(let e=0;e<t.length;e++){var n,a=t[e];for(n in a)switch(null==a.Tag&&(t.splice(e,1),e--),n){case"Tag":var l,r=document.createElement(a[n]);(null!=a.Parent?(l=0,null!=a.Index&&(l=a.Index),document.getElementsByTagName(a.Parent)[l]):document.body).appendChild(r);break;case"Text":r.innerText=a[n];break;default:r.setAttribute(n,a[n])}}}
