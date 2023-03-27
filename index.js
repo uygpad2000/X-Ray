@@ -1,4 +1,4 @@
-import { xDevice } from './lib/XDevice/Xdevice.js'
+import { xDevice } from './lib/xDevice/XDevice.js'
 var token =
 [
 {'tag':'title','parent':'head','pindex':0,'text':'index'},
