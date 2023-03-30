@@ -1,3 +1,4 @@
+import * from '.\lib\X-Ray.js'
 var token =
 [
 {'tag':'title','parent':'head','pindex':0,'text':'index'},
