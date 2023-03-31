@@ -5,9 +5,10 @@ var token =
 {'tag':'title','parent':'head','pindex':0,'text':'index'},
 {'tag':'h1','parent':'body','pindex':0,'text':'X-Ray Framework'},
 {'tag':'link','parent':'head','pindex':0,'rel':'stylesheet','href':'./style/style.css'},
-{'tag':'img','parent':'body','pindex':0,'src':'./res/Title.png','width':'150px','border-radius':'10px','margin-left':'5px'}
+{'tag':'img','parent':'body','pindex':0,'src':'./res/Title.png','width':'150px','id':'x-ray'}
 ]
 xray.Create(token)
 var device = xray.getDeviceType()
-var token = [{'tag':'div','parent':'body','pindex':0,'text':'platform:'+device.platform}]
+var platform = device.platform
+var token = [{'tag':'div','parent':'body','pindex':0,'text':'platform:'+device.platform,'id':'platform-info'}]
 xray.Create(token)
