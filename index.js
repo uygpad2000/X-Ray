@@ -12,3 +12,4 @@ var device = xray.getDeviceType()
 var platform = device.platform
 var token = [{'tag':'div','parent':'body','pindex':0,'text':'platform:'+device.platform,'id':'platform-info'}]
 xray.Create(token)
+device.adjustResolution()
