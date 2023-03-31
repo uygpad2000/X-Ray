@@ -6,5 +6,5 @@ h1{
 }
 #x-ray{
   border-radius:5px;
-  margin-left:10px;
+  border:solid 2px #000000;
 }
