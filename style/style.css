@@ -1,4 +1,10 @@
 body{
   margin: 0;
-  color:#cacaca;
+}
+h1{
+  color:#CACACA;
+}
+#x-ray{
+  border-radius:5px;
+  margin-left:10px;
 }
