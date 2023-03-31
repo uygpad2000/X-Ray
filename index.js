@@ -8,3 +8,6 @@ var token =
 {'tag':'img','parent':'body','pindex':0,'src':'./res/Title.png','width':'150px','border-radius':'10px','margin-left':'5px'}
 ]
 xray.Create(token)
+var device = xray.getDeviceType()
+var token = [{'tag':'div','parent':'body','pindex':0,'text':'platform:'+device.platform}]
+xray.Create(token)
