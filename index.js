@@ -10,6 +10,8 @@ var token =
 xray.Create(token)
 var device = xray.getDeviceType()
 var platform = device.platform
-var token = [{'tag':'div','parent':'body','pindex':0,'text':'platform:'+device.platform+'('+navigator.platform+')','id':'platform-info'}]
+var token = [{'tag':'div','parent':'body','pindex':0,'text':'platform:'+device.platform+'('+navigator.platform+')','id':'platform-info'},
+             {'tag':'div','parent':'body','pindex':0,'text':'Screen Resolution:'+device.resolution[0]+'x'+device.resolution[1]},
+             {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'}]
 xray.Create(token)
-device.adjustResolution()
+device.adjustResolution(640,480)
