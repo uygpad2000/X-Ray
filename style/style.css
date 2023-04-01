@@ -7,10 +7,13 @@ h1{
   margin-top: 5px;
 }
 #x-ray{
-  filter:blur(2px);
   border-radius:5px;
   border:solid 2px #000000;
-  filter:invert(90%);
+  margin-top: 0px;
   position:absoulute;
   top:0px;
+}
+#x-ray:hover{
+  filter:blur(2px);
+  filter:invert(90%);
 }
