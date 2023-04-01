@@ -3,8 +3,14 @@ body{
 }
 h1{
   color:#CACACA;
+  margin-left:170px;
+  margin-top: 5px;
 }
 #x-ray{
+  filter:blur(2px);
   border-radius:5px;
   border:solid 2px #000000;
+  filter:invert(90%);
+  position:absoulute;
+  top:0px;
 }
