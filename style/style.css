@@ -2,17 +2,22 @@ body{
   margin: 0;
 }
 h1{
+  background-color:#525164;
   color:#CACACA;
-  margin-left:170px;
+  height:66px;
+  margin-left: 0px;
   margin-top: 5px;
+  padding-left:170px;
 }
 #x-ray{
-  border-radius:5px;
+  border-radius: 5px;
   border:solid 2px #000000;
   margin-top: 0px;
   position:absolute;
   top:0px;
+  user-select:none;
 }
 #x-ray:hover{
-  filter:invert(90%);
+  border-color:#CACACA;
+  cursor:pointer;
 }
