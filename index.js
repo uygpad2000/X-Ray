@@ -14,4 +14,4 @@ var token = [{'tag':'div','parent':'body','pindex':0,'text':'platform:'+device.p
              {'tag':'div','parent':'body','pindex':0,'text':'Screen Resolution:'+device.resolution[0]+'x'+device.resolution[1]},
              {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'}]
 xray.Create(token)
-device.adjustResolution(640,480)
+device.adjustResolution('640px','480px')
