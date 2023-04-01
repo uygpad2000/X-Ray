@@ -16,5 +16,5 @@ var token = [{'tag':'div','parent':'body','pindex':0,'text':'Platform:'+device.p
              {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'},
              {'tag':'button','parent':'body','pindex':0,'text':'Language Setting'}]
 var handler = xray.Create(token)
-xray.createAttributes(handler[3],['onclick','javascript:window.alert("すみません，分かりません")'])
+xray.createAttribute(handler[3],['onclick','javascript:window.alert("すみません，分かりません")'])
 // device.adjustResolution('640px','480px')
