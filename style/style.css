@@ -23,3 +23,6 @@ h1{
   border-color:#CACACA;
   cursor:pointer;
 }
+audio{
+  visibility: hidden;
+}
