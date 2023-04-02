@@ -18,7 +18,7 @@ var token = [
              {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'},
              {'tag':'button','parent':'body','pindex':0,'text':'Language Setting'},
              {'tag':'audio','parent':'body','pindex':0,'controls':'controls'},
-             {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3'}
+             {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3','autoplay':'autoplay'}
             ]
 var handler = xray.Create(token)
 xray.createAttribute(handler[4],['onclick','javascript:window.alert('+device.language+')'])
