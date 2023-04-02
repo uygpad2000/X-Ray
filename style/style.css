@@ -3,6 +3,7 @@ body{
 }
 h1{
   background-color:#525164;
+  background-image: linear-gradient(to bottom, black, transparent);
   color:#CACACA;
   height:66px;
   line-height: 66px;
