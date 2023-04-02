@@ -11,10 +11,13 @@ var token =
 xray.Create(token)
 var device = xray.getDeviceType()
 var platform = device.platform
-var token = [{'tag':'div','parent':'body','pindex':0,'text':'Platform:'+device.platform+'('+navigator.platform+')','id':'platform-info'},
+var token = [
+             {'tag':'div','parent':'body','pindex':0,'text':'Platform:'+device.platform+'('+navigator.platform+')','id':'platform-info'},
              {'tag':'div','parent':'body','pindex':0,'text':'Screen Resolution:'+device.resolution[0]+'x'+device.resolution[1]},
+             {'tag':'div','parent':'body','pindex':0,'text':'Browser:'+device.browser},
              {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'},
-             {'tag':'button','parent':'body','pindex':0,'text':'Language Setting'}]
+             {'tag':'button','parent':'body','pindex':0,'text':'Language Setting'},
+             {'tag':'audio','parent':'body','pindex':0,'src':'http://topsecret.quadium32.com/notme.mp3','type':'mpeg'}
+            ]
 var handler = xray.Create(token)
-xray.createAttribute(handler[3],['onclick','javascript:window.alert("すみません，分かりません")'])
-// device.adjustResolution('640px','480px')
+xray.createAttribute(handler[3],['onclick','javascript:window.alert(device.language)'])
