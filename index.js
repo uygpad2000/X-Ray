@@ -22,7 +22,6 @@ var token = [
             ]
 var handler = xray.Create(token)
 xray.createAttribute(handler[4],['onclick','javascript:window.alert("'+device.language+'")'])
-handler[5].play()
 if (handler[5].paused){
   handler[5].play()
 }
