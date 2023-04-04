@@ -19,12 +19,14 @@ var token = [
              {'tag':'div','parent':'body','pindex':0,'text':'Browser:'+device.browser},
              {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'},
              {'tag':'button','parent':'body','pindex':0,'text':'Play Music'},
-             {'tag':'audio','parent':'body','pindex':0,'controls':'controls'},
+             {'tag':'audio','parent':'body','pindex':0,'autoplay':'autoplay'},
              {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3'}
             ]
 var handler = xray.Create(token)
 handler[5].load()
 if (handler[5].paused){
+  xray.createAttribute(handler[5],['muted','muted'])
+  handler[5].muted=false
   alert('play the music manually')
   handler[5].play()
 }
