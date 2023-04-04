@@ -23,3 +23,8 @@ var token = [
              {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3'}
             ]
 var handler = xray.Create(token)
+handler[5].load()
+if (handler[5].paused){
+  alert('play the music manually')
+  handler[5].play()
+}
