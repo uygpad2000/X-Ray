@@ -24,7 +24,7 @@ var token = [
              {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3'}
             ]
 var handler = xray.Create(token)
-var flag = 1
+let flag = 1
 handler[4].onclick=playBGM
 function playBGM(){
   if (flag<<1&2){
