@@ -27,4 +27,5 @@ handler[4].onclick=playBGM
 function playBGM(){
   handler[5].load()
   handler[5].play()
+  handler[4].innerText='paused'
 }
