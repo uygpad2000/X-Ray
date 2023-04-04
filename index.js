@@ -27,7 +27,7 @@ var handler = xray.Create(token)
 var flag = 1
 handler[4].onclick=playBGM
 function playBGM(){
-  if ((flag << 1) &= 2){
+  if (flag<<1&2){
     handler[5].load()
     handler[5].play()
     handler[4].innerText='pause'
