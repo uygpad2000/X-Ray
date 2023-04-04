@@ -10,9 +10,9 @@ var token =
 {'tag':'div','parent':'body','pindex':0,'text':'Machine Configuration:'}
 ]
 xray.Create(token)
-xray.createAttribute(document.getElementsByTagName('html')[0],['lang',device.language])
 var device = xray.getDeviceType()
 var platform = device.platform
+xray.createAttribute(document.getElementsByTagName('html')[0],['lang',device.language])
 var token = [
              {'tag':'div','parent':'body','pindex':0,'text':'Platform:'+device.platform+'('+navigator.platform+')','id':'platform-info'},
              {'tag':'div','parent':'body','pindex':0,'text':'Screen Resolution:'+device.resolution[0]+'x'+device.resolution[1]},
