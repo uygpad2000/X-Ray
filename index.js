@@ -25,17 +25,17 @@ var token = [
             ]
 var handler = xray.Create(token)
 let flag = 1
-handler[4].onclick=playBGM
+handler[5].onclick=playBGM
 function playBGM(){
   if (flag<<1&2){
-    handler[5].load()
-    handler[5].play()
-    handler[4].innerText='pause'
+    handler[6].load()
+    handler[6].play()
+    handler[5].innerText='pause'
     flag = flag << 1
   }
   else{
-    handler[5].pause()
-    handler[4].innerText='Play Music'
+    handler[6].pause()
+    handler[5].innerText='Play Music'
     flag = flag >> 1
   }
 }
