@@ -10,6 +10,7 @@ var token =
 {'tag':'div','parent':'body','pindex':0,'text':'Machine Configuration:'}
 ]
 xray.Create(token)
+xray.createAttribute(document.getElementsByTagName('html')[0],['lang',device.language])
 var device = xray.getDeviceType()
 var platform = device.platform
 var token = [
@@ -18,19 +19,7 @@ var token = [
              {'tag':'div','parent':'body','pindex':0,'text':'Browser:'+device.browser},
              {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'},
              {'tag':'button','parent':'body','pindex':0,'text':'Play Music'},
-             {'tag':'audio','parent':'body','pindex':0,'control':'autoplay'},
+             {'tag':'audio','parent':'body','pindex':0,'controls':'controls'},
              {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3'}
             ]
 var handler = xray.Create(token)
-xray.createAttribute(document.getElementsByTagName('html')[0],['lang',device.language])
-function BGM(){
-  var promise = handler[5].play()
-  if (promise!=undefined){
-  promise.then(_=>{
-        handler[5].play()
-        }).catch(error=>{
-        alert("Can't autoplay")
-        })
-  }
-}
-handler[4].onclick=BGM()
