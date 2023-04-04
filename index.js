@@ -1,5 +1,7 @@
 import * as xray from './lib/X-Ray.js'
 
+let flag = 1
+
 var token =
 [
 {'tag':'meta','parent':'head','pindex':0,'name':'viewport','content':'width=device-width, initial-scale=1.0'},
@@ -21,10 +23,9 @@ var token = [
              {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'},
              {'tag':'button','parent':'body','pindex':0,'text':'Play Music'},
              {'tag':'audio','parent':'body','pindex':0},
-             {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3'}
+             {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3','preload':'load'}
             ]
 var handler = xray.Create(token)
-let flag = 1
 handler[5].onclick=playBGM
 function playBGM(){
   if (flag<<1&2){
