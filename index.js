@@ -27,7 +27,7 @@ var token = [
             ]
 var handler = xray.Create(token)
 handler[5].onclick=playBGM
-function playBGM(){h
+function playBGM(){
   if (flag<<1&2){
     handler[6].load()
     handler[6].play()
