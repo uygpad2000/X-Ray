@@ -21,7 +21,8 @@ var token = [
              {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3'}
             ]
 var handler = xray.Create(token)
-xray.createAttribute(handler[4],['onclick','javascript:window.alert("'+device.language+'")'])
+xray.createAttribute(document.getElementsByTagName('html')[0],['lang':device.language])
+xray.createAttribute(handler[4],['onclick','javascript:'handler[5]+'.play'])
 if (handler[5].paused){
   handler[5].load()
   handler[5].play()
