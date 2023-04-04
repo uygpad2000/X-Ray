@@ -16,16 +16,26 @@ xray.createAttribute(document.getElementsByTagName('html')[0],['lang',device.lan
 var token = [
              {'tag':'div','parent':'body','pindex':0,'text':'Platform:'+device.platform+'('+navigator.platform+')','id':'platform-info'},
              {'tag':'div','parent':'body','pindex':0,'text':'Screen Resolution:'+device.resolution[0]+'x'+device.resolution[1]},
-             {'tag':'div','parent':'body','pindex':0,'text':'Browser:'+device.browser},
+             {'tag':'div','parent':'body','pindex':0,'text':'Language:'+device.language},
+             {'tag':'div','parent':'body','pindex':0,'text':'Browser:'+device.browser},             
              {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'},
              {'tag':'button','parent':'body','pindex':0,'text':'Play Music'},
              {'tag':'audio','parent':'body','pindex':0},
              {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3'}
             ]
 var handler = xray.Create(token)
+var flag = 1
 handler[4].onclick=playBGM
 function playBGM(){
-  handler[5].load()
-  handler[5].play()
-  handler[4].innerText='paused'
+  if ((flag << 1) &= 2){
+    handler[5].load()
+    handler[5].play()
+    handler[4].innerText='pause'
+    flag = flag << 1
+  }
+  else{
+    handler[5].pause()
+    handler[4].innerText='Play Music'
+    flag = flag >> 1
+  }
 }
