@@ -17,7 +17,7 @@ var token = [
              {'tag':'div','parent':'body','pindex':0,'text':'Screen Resolution:'+device.resolution[0]+'x'+device.resolution[1]},
              {'tag':'div','parent':'body','pindex':0,'text':'Browser:'+device.browser},
              {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'},
-             {'tag':'button','parent':'body','pindex':0,'text':'Music'},
+             {'tag':'button','parent':'body','pindex':0,'text':'Play Music'},
              {'tag':'audio','parent':'body','pindex':0,'autoplay':'autoplay'},
              {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3'}
             ]
@@ -26,4 +26,4 @@ xray.createAttribute(document.getElementsByTagName('html')[0],['lang',device.lan
 function BGM(){
   handler[5].play()
 }
-xray.createAttribute(handler[4],['onclick',"BGM()"])
+handler[4].onclick=BGM()
