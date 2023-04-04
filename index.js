@@ -23,7 +23,7 @@ var token = [
             ]
 var handler = xray.Create(token)
 xray.createAttribute(document.getElementsByTagName('html')[0],['lang',device.language])
-xray.createAttribute(handler[4],['onclick','BGM()'])
+xray.createAttribute(handler[4],['onclick',BGM()])
 function BGM(){
   handler[5].play()
 }
