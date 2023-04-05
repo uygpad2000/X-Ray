@@ -30,7 +30,8 @@ audio{
 button{
   background: #00BE9B;
   color:#FFFFFF;
-  border-radius:10px
+  border-radius:10px;
+  width:120px;
 }
 button:hover{
   background: #049378;
