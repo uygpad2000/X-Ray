@@ -24,7 +24,8 @@ var token = [
              {'tag':'button','parent':'body','pindex':0,'text':'Play Music'},
              {'tag':'audio','parent':'body','pindex':0},
              {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3','preload':'load'},
-             {'tag':'a','parent':'body','pindex':0,'text':'Download X-Ray Framework','href':'https://github.com/uygpad2000/X-Ray/releases/download/X-Ray/X-Ray-0.0.1.zip'}
+             {'tag':'a','parent':'body','pindex':0,'text':'Download X-Ray Framework','href':'https://github.com/uygpad2000/X-Ray/releases/download/X-Ray/X-Ray-0.0.1.zip'},
+             {'tag':'input','parent':'body','pindex':0}
             ]
 var handler = xray.Create(token)
 handler[5].onclick=playBGM
