@@ -45,5 +45,5 @@ function playBGM(){
   }
 }
 function showMSG(){
-  xray.Create([{'tag':'crack','parent':'body','pindex':0,'text':handler[6].value}])
+  xray.Create([{'tag':'crack','parent':'body','pindex':0,'text':handler[10].value}])
 }
