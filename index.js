@@ -25,7 +25,7 @@ var token = [
              {'tag':'audio','parent':'body','pindex':0},
              {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3','preload':'load'},
              {'tag':'a','parent':'body','pindex':0,'text':'Download X-Ray Framework','href':'https://github.com/uygpad2000/X-Ray/releases/download/X-Ray/X-Ray-0.0.1.zip'},
-             {'tag':'button','parent':'body','pindex','text':'偽造'},
+             {'tag':'button','parent':'body','pindex':0,'text':'偽造'},
              {'tag':'input','parent':'body','pindex':0}
             ]
 var handler = xray.Create(token)
