@@ -29,6 +29,7 @@ var token = [
             ]
 var handler = xray.Create(token)
 handler[5].onclick=playBGM
+handler[9].onclick=showMSG()
 function playBGM(){
   if (flag<<1&2){
     handler[6].load()
@@ -41,4 +42,9 @@ function playBGM(){
     handler[5].innerText='Play Music'
     flag = flag >> 1
   }
+}
+function showMSG(){
+  var a=[]
+  a.push({'tag':'crack','parent':'body','pindex':0,'text':handler[6].value})
+  xray.Create(token)
 }
