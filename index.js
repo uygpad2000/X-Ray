@@ -1,44 +1,21 @@
-import * as xray from './lib/X-Ray.js'
+﻿import { generateElement } from './script/X-Ray/dom.js'
 
-let flag = 1
-
-var token =
-[
-{'tag':'meta','parent':'head','pindex':0,'name':'viewport','content':'width=device-width, initial-scale=1.0'},
-{'tag':'title','parent':'head','pindex':0,'text':'X-Ray Framework'},
-{'tag':'h1','parent':'body','pindex':0,'text':'X-Ray Framework'},
-{'tag':'link','parent':'head','pindex':0,'rel':'stylesheet','href':'./style/style.css'},
-{'tag':'img','parent':'body','pindex':0,'src':'./res/Title.png','id':'x-ray'},
-{'tag':'div','parent':'body','pindex':0,'text':'Machine Configuration:'}
+var token=[
+	{'tag':'title','parent':'head','pindex':0,'text':'Sample'},
+	{'tag':'meta','charset':'utf-8','parent':'head','pindex':0},
+	{'tag':'link','rel':'stylesheet','parent':'head','pindex':0,'href':'./style/page.css'},
+	{'tag':'div','parent':'body','pindex':0,'text':'This Site is built with X-Ray.js','id':'wqas'},
+	{'tag':'input','parent':'body','pindex':0,'id':'ipt00'},
+	{'tag':'button','parent':'body','pindex':0,'id':'cfm00','text':'Go'},
+	{'tag':'span','parent':'body','pindex':0,'text':'Xavigator','id':'title'},
+	{'tag':'span','parent':'body','pindex':0,'text':'Utils','id':'ach0'}
 ]
-xray.Create(token)
-var device = xray.getDeviceType()
-var platform = device.platform
-xray.createAttribute(document.getElementsByTagName('html')[0],['lang',device.language])
-var token = [
-             {'tag':'div','parent':'body','pindex':0,'text':'Platform:'+device.platform+'('+navigator.platform+')','id':'platform-info'},
-             {'tag':'div','parent':'body','pindex':0,'text':'Screen Resolution:'+device.resolution[0]+'x'+device.resolution[1]},
-             {'tag':'div','parent':'body','pindex':0,'text':'Language:'+device.language},
-             {'tag':'div','parent':'body','pindex':0,'text':'Browser:'+device.browser},             
-             {'tag':'link','parent':'head','pindex':0,'rel':'icon','href':'./res/icon.ico'},
-             {'tag':'button','parent':'body','pindex':0,'text':'Play Music'},
-             {'tag':'audio','parent':'body','pindex':0},
-             {'tag':'source','parent':'audio','pindex':0,'src':'./res/notme.mp3','type':'audio/mp3','preload':'load'},
-             {'tag':'a','parent':'body','pindex':0,'text':'Download X-Ray Framework','href':'https://github.com/uygpad2000/X-Ray/releases/download/X-Ray/X-Ray-0.0.1.zip'}
-            ]
-var handler = xray.Create(token)
-handler[5].onclick=playBGM
-handler[9].onclick=showMSG
-function playBGM(){
-  if (flag<<1&2){
-    handler[6].load()
-    handler[6].play()
-    handler[5].innerText='pause'
-    flag = flag << 1
-  }
-  else{
-    handler[6].pause()
-    handler[5].innerText='Play Music'
-    flag = flag >> 1
-  }
-
+var handler = generateElement(token)
+handler[5].onclick=search
+handler[7].onclick=goToUtil
+function search(){
+	location.href='https://yandex.eu/search/?text='+handler[4].value
+}
+function goToUtil(){
+	location.href='./kit.html'
+}
