@@ -90,3 +90,31 @@ span#ach0:hover{
 	color:#747772;
 	cursor:pointer;
 }
+span#ach1{
+	color:#FFFFFF;
+}
+@media only screen and (max-width: 600px) {
+	input#ipt00{
+		top:45vh;
+		height:7vw;
+		width:50vw;
+		left:24.375vw;
+		border-radius:3vw;
+		padding: 0 0 0 0;
+ 	}
+	button#cfm00{
+		height:7vw;
+		width:15vw;
+		left:64vw;
+		top:45vh;
+		background-color:#CDCEAA;
+	}
+	span#title{
+		width:53.333333vw;
+		left:23.333333vw;
+		font-size:2rem;
+	}
+	span#ach0{
+		visibility:hidden;
+	}
+}
