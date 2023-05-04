@@ -14,7 +14,7 @@ var handler = generateElement(token)
 handler[5].onclick=search
 handler[7].onclick=goToUtil
 function search(){
-	location.href='https://yandex.eu/search/?text='+handler[4].value
+	location.href='https://yandex.eu/search/?text='+encodeURIComponent(handler[4].value)
 }
 function goToUtil(){
 	location.href='./kit.html'
